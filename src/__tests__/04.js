@@ -1,8 +1,8 @@
 import * as React from 'react'
-import {render, screen} from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import App from '../final/04'
-// import App from '../exercise/04'
+//import App from '../exercise/04'
 
 test('can play a game of tic tac toe', async () => {
   render(<App />)
@@ -57,7 +57,7 @@ test('does not change square value when it is clicked multiple times', async () 
 })
 
 test('can reset game and start from beginning', async () => {
-  const {container} = render(<App />)
+  const { container } = render(<App />)
   const [square1, square2] = Array.from(screen.queryAllByRole('button'))
   const [reset] = container.getElementsByClassName('restart')
 
